@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>AR Dua Kad | Kata Kerja Bahasa Melayu (v2.1)</title>
+  <link rel="stylesheet" href="./multi-ar.css?v=21">
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+</head>
+<body class="ar-screen">
+  <!-- Unsur video dimainkan melalui butang kerana banyak pelayar telefon menyekat autoplay bersuara. -->
+  <video id="video0" src="./video-kata-kerja.mp4" playsinline webkit-playsinline preload="metadata" crossorigin="anonymous" class="hidden-video" aria-hidden="true"></video>
+  <video id="video1" src="./video-kata-kerja-tak-transitif.mp4" playsinline webkit-playsinline preload="metadata" crossorigin="anonymous" class="hidden-video" aria-hidden="true"></video>
+
+  <!-- Penting: fail targets.mind mesti disusun mengikut Kad 1 dahulu, kemudian Kad 2. -->
+  <a-scene embedded mindar-image="imageTargetSrc: ./targets.mind?v=21; maxTrack: 1; autoStart: true;"
+    renderer="colorManagement: true; physicallyCorrectLights: true; antialias: true"
+    color-space="sRGB" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-assets timeout="30000">
+      <img id="poster0" src="./poster-video.jpg" alt="Poster video transitif">
+      <img id="poster1" src="./poster-2.jpg" alt="Poster video tak transitif">
+    </a-assets>
+    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+    <a-entity id="sasaran0" mindar-image-target="targetIndex: 0">
+      <a-plane width="1.34" height=".86" position="0 .06 .045" material="color: #15324d; shader: flat; side: double"></a-plane>
+      <a-video id="paparanVideo0" src="#video0" width="1.24" height=".698" position="0 .09 .080" visible="false" material="shader: flat; side: double"></a-video>
+      <a-image id="paparanPoster0" src="#poster0" width="1.24" height=".698" position="0 .09 .090" visible="true" material="shader: flat; side: double"></a-image>
+      <a-plane width="1.34" height=".075" position="0 -.331 .065" material="color: #6FE0C6; shader: flat"></a-plane>
+      <a-text id="labelSasaran0" value="KAD 1 - AKTIF TRANSITIF" align="center" color="#0C2A3E" position="0 -.349 .09" width="1.22"></a-text>
+    </a-entity>
+
+    <a-entity id="sasaran1" mindar-image-target="targetIndex: 1">
+      <a-plane width="1.34" height=".86" position="0 .06 .045" material="color: #302064; shader: flat; side: double"></a-plane>
+      <a-video id="paparanVideo1" src="#video1" width="1.24" height=".698" position="0 .09 .080" visible="false" material="shader: flat; side: double"></a-video>
+      <a-image id="paparanPoster1" src="#poster1" width="1.24" height=".698" position="0 .09 .090" visible="true" material="shader: flat; side: double"></a-image>
+      <a-plane width="1.34" height=".075" position="0 -.331 .065" material="color: #F9CD7E; shader: flat"></a-plane>
+      <a-text id="labelSasaran1" value="KAD 2 - AKTIF TAK TRANSITIF" align="center" color="#2C2468" position="0 -.349 .09" width="1.24"></a-text>
+    </a-entity>
+  </a-scene>
+
+  <div class="ar-ui">
+    <header class="ar-head">
+      <div><strong>CIKGU AR <span>×</span> BAHASA MELAYU</strong><small>Mod dua kad • Versi 2.1</small></div>
+      <a href="./index.html" class="back-btn">← Menu</a>
+    </header>
+    <section class="ar-bottom" aria-label="Kawalan video">
+      <div class="live-label"><span class="live-dot"></span><span id="topik">Menunggu kad...</span></div>
+      <p id="status" class="ar-status" role="status" aria-live="polite">Halakan kamera pada Kad 1 atau Kad 2.</p>
+      <div class="video-progress"><progress id="kemajuan" value="0" max="1000"></progress><span id="masa">0:00 / 0:00</span></div>
+      <div class="ar-buttons">
+        <button id="btnMain" type="button" disabled>▶ Mainkan Video</button>
+        <button id="btnUlang" type="button" disabled>↻ Ulang</button>
+      </div>
+      <div class="mapping-info" id="mappingInfo">Padanan: Sasaran 0 → Video Kad 1 | Sasaran 1 → Video Kad 2</div>
+      <button id="btnSwap" class="swap-btn" type="button">⇄ Tukar Padanan Kad 1 dan Kad 2</button>
+      <p class="caption-note">Jika Kad 2 memainkan Video 1, tekan “Tukar Padanan”. Tekan Mainkan Video untuk audio dan kekalkan kad dalam pandangan kamera.</p>
+      <a id="tontonBiasa" href="./video-kata-kerja.mp4" target="_blank" rel="noopener">Tidak muncul? Tonton video di luar AR ↗</a>
+    </section>
+  </div>
+  <script src="./multi-ar.js?v=21" defer></script>
+</body>
+</html>
