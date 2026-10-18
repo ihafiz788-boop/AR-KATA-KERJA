@@ -1,0 +1,63 @@
+<!doctype html><html lang="ms"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<title>AR Cikgu | Kad Bahasa Melayu</title>
+<link rel="stylesheet" href="./style.css"/>
+<script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+</head><body class="ar-page">
+  <a-scene
+    mindar-image="imageTargetSrc: ./targets.mind; autoStart: true; maxTrack: 1;"
+    embedded
+    color-space="sRGB"
+    renderer="colorManagement: true; physicallyCorrectLights: true; antialias: true;"
+    vr-mode-ui="enabled: false"
+    device-orientation-permission-ui="enabled: false"
+  >
+    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+    <a-entity id="kadAR" mindar-image-target="targetIndex: 0">
+      <!-- 3D cikgu kartun ringkas, dibina terus dalam A-Frame. -->
+      <a-entity id="cikgu3D" position="-.23 -.05 .17" scale=".9 .9 .9"
+        animation="property: position; from: -.23 -.05 .17; to: -.23 0 .17; dir: alternate; loop: true; dur: 1550; easing: easeInOutSine;">
+        <a-sphere position="0 .26 0" radius=".148" color="#F2BA91"></a-sphere>
+        <a-sphere position="0 .365 -.01" radius=".15" color="#30273a" scale="1 .48 .91"></a-sphere>
+        <a-sphere position="-.145 .258 .005" radius=".027" color="#F2BA91"></a-sphere>
+        <a-sphere position=".145 .258 .005" radius=".027" color="#F2BA91"></a-sphere>
+        <a-sphere position="-.054 .267 .133" radius=".022" color="#1d2536"></a-sphere>
+        <a-sphere position=".054 .267 .133" radius=".022" color="#1d2536"></a-sphere>
+        <a-sphere position="-.049 .274 .151" radius=".007" color="#ffffff"></a-sphere>
+        <a-sphere position=".058 .274 .151" radius=".007" color="#ffffff"></a-sphere>
+        <a-sphere position="0 .204 .141" radius=".025" color="#9a4d54" scale="1.4 .28 .3"></a-sphere>
+        <a-cylinder position="0 -.013 0" radius=".103" height=".295" color="#18a999"></a-cylinder>
+        <a-cylinder position="0 .105 .03" radius=".042" height=".035" color="#ffffff"></a-cylinder>
+        <a-cylinder position="-.05 -.245 0" radius=".035" height=".2" color="#2d436b"></a-cylinder>
+        <a-cylinder position=".05 -.245 0" radius=".035" height=".2" color="#2d436b"></a-cylinder>
+        <a-box position="-.05 -.349 .025" width=".087" height=".047" depth=".125" color="#273044"></a-box>
+        <a-box position=".05 -.349 .025" width=".087" height=".047" depth=".125" color="#273044"></a-box>
+        <a-entity position="-.115 .077 0" rotation="0 0 -15">
+          <a-cylinder position="-.018 -.092 0" radius=".036" height=".195" color="#18a999"></a-cylinder>
+          <a-sphere position="-.031 -.186 0" radius=".04" color="#F2BA91"></a-sphere>
+        </a-entity>
+        <a-entity position=".119 .075 0"
+          animation="property: rotation; from: 0 0 0; to: 0 0 -60; dir: alternate; loop: true; dur: 780; easing: easeInOutQuad;">
+          <a-cylinder position=".013 -.080 0" radius=".037" height=".175" color="#18a999"></a-cylinder>
+          <a-sphere position=".016 -.170 0" radius=".04" color="#F2BA91"></a-sphere>
+        </a-entity>
+      </a-entity>
+      <!-- Papan kata kerja di sebelah watak -->
+      <a-plane position=".23 .005 .055" width=".53" height=".51" color="#ffffff" material="side: double; opacity: .97;"></a-plane>
+      <a-plane position=".23 .183 .066" width=".46" height=".1" color="#ffce64"></a-plane>
+      <a-text value="KATA KERJA" position=".23 .182 .075" align="center" color="#153c53" width=".46" scale=".7 .7 1"></a-text>
+      <a-text id="kataAR" value="membaca" position=".23 .047 .077" align="center" color="#123a50" width=".53" scale="1.0 1.0 1"></a-text>
+      <a-text id="ayatAR" value="Ali membaca buku." position=".23 -.115 .077" align="center" color="#245267" width=".51" wrap-count="20"></a-text>
+      <a-ring position="0 0 .025" radius-inner=".45" radius-outer=".47" color="#aaf6db" material="side: double; opacity: .6"></a-ring>
+    </a-entity>
+  </a-scene>
+<div class="ar-ui">
+ <header class="topbar"><div class="brand">Cikgu AR · Bahasa Melayu<small>Imbas kad “Kata Kerja Aktif Transitif”</small></div><a class="back" href="./index.html">← Kembali</a></header>
+ <footer class="footer">
+  <div class="hint" id="status" aria-live="polite">Halakan kamera kepada kad gambar...</div>
+  <section class="lesson" aria-label="Penerangan pembelajaran"><strong id="kata">membaca</strong><p id="huraian">Ali membaca buku. Perkataan 'membaca' memerlukan objek 'buku'.</p>
+  <div class="controls"><button type="button" id="suara">🔊 Dengar cikgu</button><button type="button" id="tukar">🔄 Contoh seterusnya</button></div>
+  </section>
+ </footer>
+</div>
+<script defer src="./interaksi.js"></script></body></html>
