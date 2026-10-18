@@ -1,17 +1,25 @@
 <!doctype html>
-<html lang="ms"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Cikgu AR | Projek Bahasa Melayu</title><link rel="stylesheet" href="./style.css"/></head>
-<body><main class="home"><div class="shell">
-<div class="eyebrow">Projek WebAR • Bahasa Melayu</div>
-<div class="hero"><section><h1>Cikgu AR: Kata Kerja Aktif Transitif</h1>
-<p>Imbas kad menggunakan kamera telefon dan lihat watak cikgu 3D bergerak sambil menerangkan kata kerja aktif transitif.</p>
-<div class="button-row"><a class="btn" href="./demo.html">1. Uji demo dahulu</a><a class="btn alt" href="./kelas.html">2. Cuba kad saya</a></div>
-<p class="small">Mod demo menggunakan gambar contoh rasmi MindAR; mod kad saya memerlukan <code>targets.mind</code> yang dijana daripada gambar kad di sebelah.</p>
-</section><div class="preview"><a href="./kad-kata-kerja.png" target="_blank" rel="noopener" aria-label="Buka kad imbasan"><img src="./assets/kad-kata-kerja.png" alt="Kad imbasan kata kerja aktif transitif"/></a></div></div>
-<section class="panel"><h2>Cara mula</h2><ol>
-<li>Untuk mod demo, buka <a href="./kad-demo.html">kad contoh rasmi MindAR</a> dan paparkan pada skrin lain atau cetak.</li>
-<li>Pada telefon, tekan <strong>Uji demo dahulu</strong>, beri kebenaran kamera, dan imbas gambar tersebut.</li>
-<li>Untuk kad Bahasa Melayu sendiri, buka <a href="https://hiukim.github.io/mind-ar-js-doc/tools/compile/">MindAR Image Targets Compiler</a>, muat naik <a href="./assets/kad-kata-kerja.png">kad-kata-kerja.png</a>, tekan <strong>Start</strong> dan muat turun <code>targets.mind</code>.</li>
-<li>Letak <code>targets.mind</code> di folder yang sama dengan <code>kelas.html</code>. Terbitkan semula dan tekan <strong>Cuba kad saya</strong>.</li></ol>
-<p class="small">Tip: Anda memerlukan dua skrin atau satu kad bercetak untuk mengimbas. Sesuai dengan HTTPS (contohnya GitHub Pages). Suara Bahasa Melayu bergantung pada suara tersedia di telefon.</p>
-</section></div></main></body></html>
+<html lang="ms">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AR Kata Kerja | Video Pembelajaran Interaktif</title>
+<link rel="stylesheet" href="./style-video.css">
+</head>
+<body class="home"><main class="shell">
+<span class="chip">Projek WebAR • Bahasa Melayu</span>
+<div class="layout"><div>
+<h1>Imbas kad.<br>Tonton video!</h1>
+<p class="lead">Belajar kata kerja bersama cikgu dan murid melalui animasi video dalam Augmented Reality (AR). Tiada model 3D diperlukan.</p>
+<div class="buttons"><a class="btn" href="./demo.html">① Uji dengan kad demo</a><a class="btn secondary" href="./kelas.html">② Imbas kad Bahasa Melayu</a></div>
+<p class="small">Gunakan kamera telefon. Pastikan gambar sasaran dipaparkan pada peranti lain atau dicetak.</p>
+</div><div class="preview"><a href="./kad-kata-kerja.png" target="_blank" rel="noopener"><img src="./kad-kata-kerja.png" alt="Kad Kata Kerja Aktif Transitif"></a></div></div>
+<section class="panel"><h2>Cara menggunakan AR</h2>
+<ol>
+<li>Untuk menguji, paparkan <a href="./kad-demo.html">kad contoh MindAR</a> pada komputer dan buka <a href="./demo.html">mod demo</a> di telefon.</li>
+<li>Halakan kamera kepada gambar sehingga mesej <strong>Kad dikesan!</strong> muncul.</li>
+<li>Tekan <strong>▶ Mainkan video</strong> untuk menonton animasi bersama suara. Anda boleh jeda atau ulang.</li>
+<li>Untuk kad Bahasa Melayu, hasilkan <code>targets.mind</code> daripada gambar <a href="./kad-kata-kerja.png">kad ini</a> menggunakan <a href="https://hiukim.github.io/mind-ar-js-doc/tools/compile/">MindAR Compiler</a> dan muat naik ke folder utama GitHub, kemudian buka <a href="./kelas.html">mod kad sendiri</a>.</li>
+</ol>
+<p class="small">Nota: Video terapung ialah video berbingkai, bukan hologram berlatar lutsinar. Jika peranti tidak menyokong tekstur video AR, gunakan <a href="./video-kata-kerja.mp4">mod tonton video biasa</a>.</p>
+</section>
+</main></body></html>
