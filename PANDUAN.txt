@@ -1,0 +1,38 @@
+AR KATA KERJA – VERSI VIDEO (MindAR + A-Frame)
+==============================================
+Disediakan daripada video: VID DEMO 2.MOV
+Video terbitan: video-kata-kerja.mp4 (H.264 + AAC, kira-kira 4.9 MB)
+
+PEMASANGAN PADA GITHUB PAGES
+1. Muat turun ZIP projek dan ekstrak semua fail.
+2. Pergi ke https://github.com/ihafiz788-boop/AR-KATA-KERJA
+3. Pilih Add file > Upload files.
+4. Muat naik SEMUA fail dalam ZIP ke folder utama (root) repositori.
+   Apabila terdapat nama fail yang sama, kemas kini/gantikan fail lama.
+5. Commit changes, tunggu GitHub Pages selesai diterbitkan.
+6. Buka https://ihafiz788-boop.github.io/AR-KATA-KERJA/index.html
+
+MOD DEMO – BOLEH DICUBA TERUS (TANPA targets.mind)
+- Pada KOMPUTER: buka .../AR-KATA-KERJA/kad-demo.html
+- Pada TELEFON: buka .../AR-KATA-KERJA/demo.html
+- Benarkan kamera, halakan ke kad demo, tunggu “Kad dikesan!”.
+- Tekan “Mainkan video” untuk menonton dengan audio.
+- Jika kad keluar dari pandangan kamera, video dijeda.
+
+MOD KAD BAHASA MELAYU (kelas.html)
+- Buka https://hiukim.github.io/mind-ar-js-doc/tools/compile/
+- Pilih gambar kad-kata-kerja.png yang TERKANDUNG dalam ZIP ini.
+- Start > Download targets.mind.
+- Muat naik targets.mind di folder utama GitHub, aras sama dengan kelas.html.
+- Gunakan telefon untuk buka .../AR-KATA-KERJA/kelas.html
+- Imbas kad-kata-kerja.png yang dipaparkan di komputer atau dicetak.
+
+TIPS
+- Perlu dua skrin atau satu kad bercetak untuk mengimbas.
+- Akses halaman dengan HTTPS; beri kebenaran kamera.
+- Audio perlu tindakan pengguna pada sesetengah pelayar telefon.
+- Tonton video biasa: .../AR-KATA-KERJA/video-kata-kerja.mp4
+- Video yang digunakan ialah video berbingkai, BUKAN hologram lutsinar.
+- Saiz dan kecerahan kad boleh mempengaruhi pengecaman AR.
+- Jika tiada targets.mind, kelas.html tidak akan berfungsi walaupun demo.html berfungsi.
+- Jika GitHub Pages lambat kemas kini, tunggu beberapa minit dan muat semula halaman.
