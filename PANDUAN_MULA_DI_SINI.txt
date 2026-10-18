@@ -1,0 +1,50 @@
+WEBAR BAHASA MELAYU – VERSI DUA KAD
+===================================
+
+ANDA MENDAPAT:
+- Kad 1: kad-1-transitif.png – Kata Kerja Aktif Transitif (Ali membaca buku).
+- Kad 2: kad-2-tak-transitif.png – Kata Kerja Aktif Tak Transitif (Ali berlari).
+- video-kata-kerja.mp4 – video Google Flow asal (audio asal dikekalkan).
+- video-kata-kerja-tak-transitif.mp4 – video slaid DEMO sementara, tanpa suara.
+- kelas.html – kamera AR yang mengenali DUA gambar.
+- index.html – laman menu dan paparan dua kad.
+- demo.html – mod ujian kad rasmi MindAR daripada projek asal.
+
+SATU LANGKAH PENTING SEBELUM KAD 1 DAN KAD 2 BOLEH DIIMBAS
+Fail targets.mind TIADA dalam ZIP. Ia mesti dijana daripada DUA gambar di atas.
+Komputer: https://hiukim.github.io/mind-ar-js-doc/tools/compile/
+1. Muat naik kad-1-transitif.png dahulu.
+2. Muat naik kad-2-tak-transitif.png selepas itu (DALAM SESI YANG SAMA).
+3. Tekan Start. Tunggu hingga siap.
+4. Tekan Download untuk dapatkan targets.mind.
+5. Simpan targets.mind di folder utama (root) GitHub.
+PENTING: Jangan compile satu-satu kad. Satu targets.mind perlu mengandungi kedua-dua gambar.
+Jika tersalah susunan gambar, video akan keluar pada kad yang salah.
+
+CARA MASUKKAN KE REPOSITORI ANDA
+https://github.com/ihafiz788-boop/AR-KATA-KERJA
+1. Extract ZIP.
+2. Muat naik KANDUNGAN folder ke root repositori, bukannya folder luar.
+3. Ganti index.html dan kelas.html jika diminta.
+4. Upload targets.mind yang baru juga.
+5. Commit changes. Tunggu GitHub Pages dikemas kini.
+6. Pada telefon, buka:
+https://ihafiz788-boop.github.io/AR-KATA-KERJA/kelas.html
+7. Pada komputer, buka gambar kad 1 atau kad 2. Halakan kamera telefon ke gambar.
+8. Apabila kad dikesan, tekan Mainkan Video.
+
+CARA GANTIKAN VIDEO KEDUA
+1. Export video baharu Google Flow dalam format MP4 (H.264/AAC disyorkan).
+2. Namakan tepat sebagai: video-kata-kerja-tak-transitif.mp4
+3. Muat naik dan GANTIKAN fail dengan nama yang sama di GitHub.
+4. Anda tidak perlu buat targets.mind semula jika imej kedua kad tidak diubah.
+
+NOTA PENTING
+- Jika hanya kad demo rasmi boleh diimbas tetapi Kad 1/Kad 2 tidak, semak targets.mind.
+- Kamera telefon memerlukan pautan HTTPS dan kebenaran kamera.
+- Audio dipanggil melalui butang untuk mengelak sekatan autoplay pelayar.
+- Halakan kamera kepada gambar penuh, tidak berkilat, dengan cahaya mencukupi.
+- Jika anda menukar rupa mana-mana kad, hasilkan targets.mind baharu.
+- Peranti perlahan: tutup tab tambahan dan pastikan sambungan internet stabil.
+- Video kedua dalam ZIP hanyalah video teks contoh 16 saat tanpa narasi.
+- Fail HTML/JS diperiksa secara statik; ujian kamera sebenar masih perlu dibuat di telefon.

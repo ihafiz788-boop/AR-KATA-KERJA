@@ -1,38 +1,62 @@
-<!-- Template ini digunakan untuk demo.html dan kelas.html dengan sasaran berlainan. -->
 <!doctype html>
 <html lang="ms">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>AR Kata Kerja | Video Dalam AR</title>
-<link rel="stylesheet" href="./style-video.css">
-<script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>AR Dua Kad | Kata Kerja Bahasa Melayu</title>
+  <link rel="stylesheet" href="./multi-ar.css">
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
 </head>
-<body class="ar-page">
-<!-- Gunakan video dalam DOM, bukan dalam a-assets, agar tidak menghalang kamera menunggu video preload. -->
-<video id="videoAR" src="./video-kata-kerja.mp4" poster="./poster-video.jpg" playsinline webkit-playsinline preload="metadata" crossorigin="anonymous" style="position:fixed;top:-20px;left:-20px;width:1px;height:1px;opacity:0;pointer-events:none" aria-hidden="true"></video>
-<a-scene embedded mindar-image="imageTargetSrc: ./targets.mind; autoStart: true; maxTrack: 1;" color-space="sRGB" renderer="colorManagement: true; physicallyCorrectLights: true; antialias: true;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-  <a-assets timeout="20000"><img id="gambarPoster" src="./poster-video.jpg" alt="Paparan awal video"></a-assets>
-  <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-  <a-entity id="kadAR" mindar-image-target="targetIndex: 0">
-    <!-- Video dipautkan kepada image target, bukannya unsur 3D. -->
-    <a-plane width="1.28" height=".79" position="0 .09 .065" color="#072a43" material="side: double; shader: flat;"></a-plane>
-    <a-video id="arVideo" src="#videoAR" width="1.20" height=".669" position="0 .08 .084" visible="false" material="shader: flat; side: double;"></a-video>
-    <a-image id="arPoster" src="#gambarPoster" width="1.20" height=".669" position="0 .08 .095" material="side: double; shader: flat;" visible="true"></a-image>
-    <a-plane width="1.28" height=".07" position="0 -.337 .085" color="#23ba9a" material="shader: flat;"></a-plane>
-    <a-text value="VIDEO BAHASA MELAYU" align="center" color="#092339" position="0 -.35 .1" width="1.1"></a-text>
-  </a-entity>
-</a-scene>
-<div class="overlay">
-<header class="topbar"><div class="brand">Cikgu AR · Video Bahasa Melayu<small>Imbas kad Bahasa Melayu anda</small></div><a href="./index.html" class="back">← Kembali</a></header>
-<footer class="footer" aria-label="Kawalan video AR">
- <div class="status" id="status" aria-live="polite">Halakan kamera telefon kepada kad gambar…</div>
- <div class="progressline"><progress id="kemajuan" max="1000" value="0" aria-label="Kemajuan video"></progress><span id="masa">0:00 / 0:00</span></div>
- <div class="controls"><button id="btnMain" type="button" disabled>▶ Mainkan video</button><button id="btnUlang" type="button" disabled>↻ Ulang</button></div>
- <p class="notice">Audio dimainkan selepas anda menekan Mainkan video. Kekalkan kad dalam pandangan kamera.</p>
- <a class="altlink" href="./video-kata-kerja.mp4" target="_blank" rel="noopener">Jika video AR tak muncul, tonton video tanpa AR ↗</a>
-</footer>
-</div>
-<script src="./video-ar.js" defer></script>
+<body class="ar-screen">
+  <!-- Unsur video dimainkan melalui butang kerana banyak pelayar telefon menyekat autoplay bersuara. -->
+  <video id="video0" src="./video-kata-kerja.mp4" playsinline webkit-playsinline preload="metadata" crossorigin="anonymous" class="hidden-video" aria-hidden="true"></video>
+  <video id="video1" src="./video-kata-kerja-tak-transitif.mp4" playsinline webkit-playsinline preload="metadata" crossorigin="anonymous" class="hidden-video" aria-hidden="true"></video>
+
+  <!-- Penting: fail targets.mind mesti disusun mengikut Kad 1 dahulu, kemudian Kad 2. -->
+  <a-scene embedded mindar-image="imageTargetSrc: ./targets.mind; maxTrack: 1; autoStart: true;"
+    renderer="colorManagement: true; physicallyCorrectLights: true; antialias: true"
+    color-space="sRGB" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-assets timeout="30000">
+      <img id="poster0" src="./poster-video.jpg" alt="Poster video transitif">
+      <img id="poster1" src="./poster-2.jpg" alt="Poster video tak transitif">
+    </a-assets>
+    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+    <a-entity id="sasaran0" mindar-image-target="targetIndex: 0">
+      <a-plane width="1.34" height=".86" position="0 .06 .045" material="color: #15324d; shader: flat; side: double"></a-plane>
+      <a-video id="paparanVideo0" src="#video0" width="1.24" height=".698" position="0 .09 .080" visible="false" material="shader: flat; side: double"></a-video>
+      <a-image id="paparanPoster0" src="#poster0" width="1.24" height=".698" position="0 .09 .090" visible="true" material="shader: flat; side: double"></a-image>
+      <a-plane width="1.34" height=".075" position="0 -.331 .065" material="color: #6FE0C6; shader: flat"></a-plane>
+      <a-text value="KAD 1 - AKTIF TRANSITIF" align="center" color="#0C2A3E" position="0 -.349 .09" width="1.22"></a-text>
+    </a-entity>
+
+    <a-entity id="sasaran1" mindar-image-target="targetIndex: 1">
+      <a-plane width="1.34" height=".86" position="0 .06 .045" material="color: #302064; shader: flat; side: double"></a-plane>
+      <a-video id="paparanVideo1" src="#video1" width="1.24" height=".698" position="0 .09 .080" visible="false" material="shader: flat; side: double"></a-video>
+      <a-image id="paparanPoster1" src="#poster1" width="1.24" height=".698" position="0 .09 .090" visible="true" material="shader: flat; side: double"></a-image>
+      <a-plane width="1.34" height=".075" position="0 -.331 .065" material="color: #F9CD7E; shader: flat"></a-plane>
+      <a-text value="KAD 2 - AKTIF TAK TRANSITIF" align="center" color="#2C2468" position="0 -.349 .09" width="1.24"></a-text>
+    </a-entity>
+  </a-scene>
+
+  <div class="ar-ui">
+    <header class="ar-head">
+      <div><strong>CIKGU AR <span>×</span> BAHASA MELAYU</strong><small>Mod dua kad • MindAR</small></div>
+      <a href="./index.html" class="back-btn">← Menu</a>
+    </header>
+    <section class="ar-bottom" aria-label="Kawalan video">
+      <div class="live-label"><span class="live-dot"></span><span id="topik">Menunggu kad...</span></div>
+      <p id="status" class="ar-status" role="status" aria-live="polite">Halakan kamera pada Kad 1 atau Kad 2.</p>
+      <div class="video-progress"><progress id="kemajuan" value="0" max="1000"></progress><span id="masa">0:00 / 0:00</span></div>
+      <div class="ar-buttons">
+        <button id="btnMain" type="button" disabled>▶ Mainkan Video</button>
+        <button id="btnUlang" type="button" disabled>↻ Ulang</button>
+      </div>
+      <p class="caption-note">Tekan Mainkan Video untuk audio. Kekalkan kad dalam pandangan kamera.</p>
+      <a id="tontonBiasa" href="./video-kata-kerja.mp4" target="_blank" rel="noopener">Tidak muncul? Tonton video di luar AR ↗</a>
+    </section>
+  </div>
+  <script src="./multi-ar.js" defer></script>
 </body>
 </html>
