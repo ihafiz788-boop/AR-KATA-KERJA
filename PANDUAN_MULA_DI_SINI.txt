@@ -1,0 +1,38 @@
+WEBAR KATA KERJA – SATU VIDEO (PEMBETULAN)
+
+Masalah yang diperhatikan pada 18 Oktober 2026: pautan awam GitHub
+https://github.com/ihafiz788-boop/AR-KATA-KERJA masih memaparkan kod asal
+Cikgu AR 3D dan tiada fail video-kata-kerja.mp4. Kod video belum kelihatan
+pada cabang utama yang diperiksa.
+
+CARA PASANG BETUL:
+1. Ekstrak ZIP, masuk ke dalam folder WEBAR_SATU_VIDEO_BETUL.
+2. Buka https://github.com/ihafiz788-boop/AR-KATA-KERJA (cabang MAIN).
+3. Pilih Add file -> Upload files, dan pilih SEMUA fail di dalam folder,
+   BUKAN ZIP atau folder luar. Jika nama bertindih, sahkan penggantian.
+4. Commit changes. Pergi ke Settings -> Pages, semak "Deploy from a branch",
+   cabang main, folder /(root). Tunggu deployment berjaya.
+5. Cuba URL berikut (mungkin ambil sedikit masa untuk dikemas kini):
+   https://ihafiz788-boop.github.io/AR-KATA-KERJA/index.html?v=50
+   https://ihafiz788-boop.github.io/AR-KATA-KERJA/semak.html?v=50
+
+UJIAN PALING MUDAH – JANGAN GUNA KAD SENDIRI DAHULU:
+  - Pada komputer, buka:
+    https://ihafiz788-boop.github.io/AR-KATA-KERJA/kad-demo.html
+  - Pada telefon, buka:
+    https://ihafiz788-boop.github.io/AR-KATA-KERJA/demo.html?v=50
+  - Benarkan kamera, imbas kad demo di komputer.
+  - Apabila kad dikesan, tekan Mainkan Video (perlu ketukan pengguna untuk audio).
+
+KAD BAHASA MELAYU SENDIRI (PILIHAN):
+  - Gunakan kad-kata-kerja.png dalam MindAR Image Target Compiler:
+    https://hiukim.github.io/mind-ar-js-doc/tools/compile/
+  - Jana fail targets.mind untuk SATU gambar itu sahaja.
+  - Muat naik targets.mind ke folder utama GitHub, kemudian buka kelas.html.
+  - Jangan gunakan targets.mind dua kad yang lama melainkan imej pada targetIndex 0
+    memang kad ini. Untuk kepastian jana baharu daripada satu kad.
+
+Jika index.html masih menyebut watak 3D selepas commit, versi baharu
+belum diterbitkan pada URL tersebut. Semak Actions -> Pages build and deployment.
+
+VIDEO SEDIA ADA: H.264/AAC MP4, kira-kira 70 saat / 4.9 MB.
