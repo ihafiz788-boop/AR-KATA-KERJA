@@ -1,0 +1,43 @@
+KAJATIF — WebAR Dua Video Baharu
+===============================
+
+KAD 1 -> VIDEO 1 BARU(1).MOV -> video-1-transitif.mp4
+KAD 2 -> VIDEO 2 BARU(2).MOV -> video-2-tak-transitif.mp4
+
+Kedua-dua video telah ditukar daripada MOV kepada MP4 (H.264 + AAC).
+Video lama tidak disertakan. Kad yang digunakan masih kad 1 dan kad 2 daripada pakej sebelumnya.
+
+CARA PASANG (Github Pages)
+1. Ekstrak fail ZIP ini pada komputer.
+2. Buka https://github.com/ihafiz788-boop/AR-KATA-KERJA
+3. Muat naik SEMUA fail di dalam folder pakej ke ROOT repositori di cabang main (bukan folder subdirektori).
+4. Gantikan index.html, kelas.html dan demo.html lama. Fail lama lain boleh kekal, tetapi jangan buka halaman lama.
+5. Commit changes. Buka laman anda setelah GitHub Pages siap:
+   https://ihafiz788-boop.github.io/AR-KATA-KERJA/
+6. Buka /semak.html untuk semak kedua-dua video MP4.
+7. Uji /pratonton.html dahulu untuk pastikan video 1 dan 2 betul.
+8. Untuk AR dua kad, sebaiknya buka /jana-targets.html dengan komputer, tekan Jana targets.mind dua kad.
+9. Muat naik fail targets.mind ke ROOT repositori dan Commit changes.
+10. Pada komputer, buka /kad-demo.html (dua kad). Pada telefon, buka /kelas.html; benarkan kamera.
+11. Imbas HANYA satu kad pada satu masa, kemudian tekan Mainkan Video.
+
+TANPA targets.mind:
+Halaman kelas.html akan cuba menjana data pengesanan dua kad secara automatik daripada dua fail PNG yang disertakan. Ia mungkin mengambil masa pada sesetengah telefon. Untuk pengalaman terbaik, lakukan langkah 8 dan 9.
+
+PENTING:
+- Turutan gambar semasa menjana targets.mind adalah PENTING: Kad 1 => indeks 0; Kad 2 => indeks 1.
+- Jangan gunakan fail targets.mind lama daripada pakej satu kad atau kad yang berlainan.
+- Jika app menunjukkan Menunggu Kad, pastikan keseluruhan gambar kad kelihatan dan jelas.
+- Video dengan audio memerlukan ketukan Mainkan; Safari iPhone menyekat autoplay bersuara.
+- Untuk menguji tanpa kamera: /pratonton.html
+- Untuk semak ralat fail: /semak.html
+- Gunakan Safari (iPhone) atau Chrome (Android), buka pautan terus bukan pelayar dalam aplikasi media sosial.
+
+STRUKTUR FAIL:
+index.html, kelas.html, app.js, style.css,
+kad-demo.html, kad-1-transitif.png, kad-2-tak-transitif.png,
+video-1-transitif.mp4, video-2-tak-transitif.mp4,
+poster-1.jpg, poster-2.jpg, jana-targets.html, semak.html, pratonton.html, demo.html
+
+LATIHAN / UJIAN:
+Kod dan format video diuji secara statik. Camera tracking sebenar memerlukan pengujian pada telefon.
