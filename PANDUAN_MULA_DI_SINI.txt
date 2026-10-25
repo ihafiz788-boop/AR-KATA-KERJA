@@ -1,0 +1,49 @@
+KAJATIF WEBAR — DUA KAD BAHARU (26 OKTOBER 2026)
+================================================
+
+KAD 1: kad-1-transitif.png (gambar asal dimuat naik pengguna, TIDAK DIUBAH)
+  -> video-1-transitif.mp4 (VIDEO 1 BARU)
+KAD 2: kad-2-tak-transitif.png (gambar asal dimuat naik pengguna, TIDAK DIUBAH)
+  -> video-2-tak-transitif.mp4 (VIDEO 2 BARU)
+
+PERHATIAN PENTING
+-----------------
+Kedua-dua kad mempunyai kod QR yang sama. Mengimbas QR dengan kamera biasa
+hanya membuka pautan yang sama, bukannya terus memilih Video 1 atau Video 2.
+Pilih video menerusi pengecaman KESELURUHAN gambar menggunakan kamera MindAR.
+Kedua-dua reka bentuk kad juga sangat serupa. Prestasi perbezaan automatik
+mesti diuji pada telefon; dalam keadaan tertentu pengecaman mungkin keliru.
+
+LANGKAH PASANG
+--------------
+1. Extract ZIP dan upload SEMUA isi ZIP, bukan folder luarnya, ke bahagian
+   utama github.com/ihafiz788-boop/AR-KATA-KERJA, branch main.
+2. Pastikan semua perubahan telah di-Commit ke GitHub dan GitHub Pages siap.
+3. Pada komputer, buka:
+   https://ihafiz788-boop.github.io/AR-KATA-KERJA/jana-targets.html
+   Klik 'Jana fail dua kad' untuk muat turun
+   targets-kajatif-kad-baharu.mind
+4. Upload .mind baharu itu ke bahagian paling atas repositori (sebaris kelas.html).
+   JANGAN guna targets.mind lama. Fail .mind baharu tidak dapat dijana di
+   luar pelayar daripada ZIP ini tanpa pustaka compiler MindAR.
+5. Buka: https://ihafiz788-boop.github.io/AR-KATA-KERJA/semak.html
+   Klik Semak fail — semua item patut OK.
+6. Pada komputer, buka kad-demo.html untuk tunjuk gambar kad.
+   Pada telefon, buka kelas.html. Benarkan kamera dan imbas satu kad
+   pada satu masa, pastikan keseluruhan kad dilihat.
+7. Tekan Mainkan Video apabila kad dikesan. Tukar kad untuk video satu lagi.
+
+ALTERNATIF UNTUK MENGHASILKAN .mind
+---------------------------------
+Buka https://hiukim.github.io/mind-ar-js-doc/tools/compile/
+Masukkan dua kad: Kad 1 dahulu, Kad 2 selepas itu, dalam satu sesi.
+Klik Start, kemudian Download. Namakan fail sebagai
+  targets-kajatif-kad-baharu.mind
+Upload ke GitHub.
+
+UJIAN VIDEO TANPA KAMERA:
+https://ihafiz788-boop.github.io/AR-KATA-KERJA/pratonton.html
+
+NOTA: ZIP ini TIDAK mengandungi .mind siap, kerana proses compilation memerlukan
+pustaka MindAR berjalan dalam pelayar dengan capaian internet. Pengesanan AR
+belum diuji menggunakan kamera telefon sebenar.

@@ -1,0 +1,12 @@
+{
+  "kad-1-transitif.png": {
+    "sha256": "899145d31a79e98bb3fac8a76e5877562fda0d5327cef8ce053fa5b0b6b92251",
+    "size_bytes": 3026070,
+    "index": 0
+  },
+  "kad-2-tak-transitif.png": {
+    "sha256": "bba5ac4ca1b3c49195b52e5909de4566f3775e876b5739c40d8e7d249c55869c",
+    "size_bytes": 3003830,
+    "index": 1
+  }
+}
