@@ -1,0 +1,30 @@
+KAJATIF WebAR - pembetulan kamera iPhone (v6.1)
+
+Tujuan: Mengelakkan paparan 'Membuka kamera...' tersekat pada Safari iPhone.
+
+1. Repositori: https://github.com/ihafiz788-boop/AR-KATA-KERJA
+2. Dalam cabang MAIN, muat naik TIGA fail daripada ZIP ini ke bahagian paling atas repositori:
+   - kelas.html (gantikan versi lama)
+   - app.js (gantikan versi lama)
+   - uji-kamera.html (fail baharu)
+3. Klik Commit changes. Jangan padam kad, video, atau fail .mind sedia ada.
+4. Buka secara terus dalam aplikasi Safari (bukan browser dalam ChatGPT):
+   https://ihafiz788-boop.github.io/AR-KATA-KERJA/uji-kamera.html?v=61
+   Klik Uji kamera, benarkan kamera. Jika kamera gagal, semak Safari -> Camera.
+5. Selepas ujian kamera berjaya, buka:
+   https://ihafiz788-boop.github.io/AR-KATA-KERJA/kelas.html?v=61
+   Klik Aktifkan Kamera AR, beri kebenaran kamera, kemudian imbas KAD 1 atau KAD 2.
+
+SYARAT PENTING:
+- Program ini menjangkakan fail targets-kajatif-kad-baharu.mind dalam folder utama GitHub.
+- Fail tersebut mesti mengandungi 2 sasaran, dijana daripada kad-1-transitif.png
+  dahulu dan kad-2-tak-transitif.png selepas itu.
+- Fail video mesti bernama video-1-transitif.mp4 dan video-2-tak-transitif.mp4.
+- Imej poster mesti bernama poster-1.jpg dan poster-2.jpg.
+- Pakej pembetulan ini tidak menyertakan semula video/kad/.mind. Ia hanya mengganti
+  halaman kamera AR dan menambah ujian kamera.
+
+Jika kamera ujian boleh dibuka tetapi AR gagal, halaman kelas.html akan menunjukkan
+ralat atau mesej bantuan selepas masa menunggu, bukannya berputar tanpa henti.
+
+Nota: Kod diperiksa secara statik, tetapi fungsi MindAR pada iPhone perlu diuji di telefon sebenar.
